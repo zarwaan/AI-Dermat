@@ -1,0 +1,195 @@
+body {
+    font-family: 'Poppins', Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #8ECAE6;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+}
+
+h2 {
+    margin-top: 0px;
+    margin-bottom: 15px;
+    font-size: 2rem;
+    color: #023047;
+    font-weight: 700;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+    max-width: 800px;
+}
+
+#conversation {
+    border: 1px solid #219EBC;
+    border-radius: 15px;
+    padding: 20px;
+    width: 100%;
+    height: 60vh;
+    overflow-y: auto;
+    margin-bottom: 20px;
+    background-color: #ffffff;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.message {
+    display: inline-block;
+    padding: 12px 16px;
+    border-radius: 18px;
+    margin: 10px 0;
+    max-width: 80%;
+    clear: both;
+    line-height: 1.5;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.user-message {
+    background-color: #FFB703;
+    text-align: right;
+    float: right;
+    color: #023047;
+    border-bottom-right-radius: 4px;
+}
+
+.bot-message {
+    background-color: #219EBC;
+    text-align: left;
+    float: left;
+    color: white;
+    border-bottom-left-radius: 4px;
+}
+
+.bot-message p, .user-message p {
+    margin: 0;
+    padding: 0;
+}
+
+#input-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+#prompt {
+    flex-grow: 1;
+    padding: 14px;
+    border: 1px solid #219EBC;
+    border-radius: 10px;
+    font-size: 1rem;
+    margin-right: 10px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+button {
+    padding: 12px 24px;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-weight: 600;
+}
+
+#submit {
+    background-color: #FB8500;
+}
+
+#submit:hover {
+    background-color: #e67700;
+    transform: translateY(-2px);
+}
+
+/* PDF Controls styling */
+#pdf-controls {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 15px;
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+    border: 1px solid #219EBC;
+}
+
+.pdf-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.file-upload {
+    display: flex;
+    align-items: center;
+}
+
+#select-pdf {
+    background-color: #219EBC;
+    color: white;
+}
+
+#select-pdf:hover {
+    background-color: #1a7a94;
+    transform: translateY(-2px);
+}
+
+#pdf-upload {
+    display: none;
+}
+
+#file-name {
+    margin-left: 10px;
+    font-size: 0.9rem;
+    color: #023047;
+}
+
+.pdf-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+#upload-btn {
+    background-color: #023047;
+}
+
+#upload-btn:hover {
+    background-color: #011d2f;
+    transform: translateY(-2px);
+}
+
+#clear-pdf-btn {
+    background-color: #FB8500;
+}
+
+#clear-pdf-btn:hover {
+    background-color: #e67700;
+    transform: translateY(-2px);
+}
+
+button i {
+    margin-right: 5px;
+}
+
+#pdf-status {
+    font-size: 0.9rem;
+    color: #023047;
+    padding: 8px 0;
+    margin-top: 8px;
+}
+
+/* When PDF is active */
+.pdf-active #pdf-status {
+    background-color: #8ECAE6;
+    border-left: 3px solid #219EBC;
+    padding: 8px 10px;
+    border-radius: 4px;
+}

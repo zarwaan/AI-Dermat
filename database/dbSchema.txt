@@ -1,0 +1,52 @@
+CREATE TABLE `users` (
+  `user_id` int NOT NULL AUTO_INCREMENT,
+  `username` varchar(50) NOT NULL,
+  `email` varchar(50) NOT NULL,
+  `first_name` varchar(50) NOT NULL,
+  `last_name` varchar(50) NOT NULL,
+  `password` varchar(60) NOT NULL,
+  `contact` varchar(10) DEFAULT NULL,
+  `date_of_birth` varchar(15) DEFAULT NULL,
+  PRIMARY KEY (`user_id`),
+  UNIQUE KEY `username` (`username`),
+  UNIQUE KEY `email` (`email`)
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci
+
+
+CREATE TABLE `appointments` (
+  `user_id` int NOT NULL,
+  `doctor_id` int NOT NULL,
+  `consultation_type` varchar(30) NOT NULL,
+  `date` varchar(5) NOT NULL,
+  `month` varchar(10) NOT NULL,
+  `year` varchar(4) NOT NULL,
+  `time_slot` varchar(10) NOT NULL,
+  `symptoms` varchar(100) NOT NULL,
+  `symptom_duration` varchar(30) NOT NULL,
+  `appointment_id` int NOT NULL AUTO_INCREMENT,
+  PRIMARY KEY (`appointment_id`),
+  KEY `doctor_id` (`doctor_id`),
+  KEY `fk_user` (`user_id`),
+  CONSTRAINT `appointments_ibfk_2` FOREIGN KEY (`doctor_id`) REFERENCES `doctors` (`doctor_id`) ON DELETE CASCADE,
+  CONSTRAINT `fk_user` FOREIGN KEY (`user_id`) REFERENCES `users` (`user_id`) ON DELETE CASCADE
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci
+
+
+CREATE TABLE `doctors` (
+  `doctor_id` int NOT NULL AUTO_INCREMENT,
+  `email` varchar(50) NOT NULL,
+  `first_name` varchar(50) NOT NULL,
+  `last_name` varchar(50) NOT NULL,
+  PRIMARY KEY (`doctor_id`),
+  UNIQUE KEY `email` (`email`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci
+
+
+CREATE TABLE `medical_history` (
+  `user_id` int NOT NULL,
+  `current_medication` varchar(100) DEFAULT NULL,
+  `known_allergies` varchar(100) DEFAULT NULL,
+  `past_information` varchar(100) DEFAULT NULL,
+  PRIMARY KEY (`user_id`),
+  CONSTRAINT `medical_history_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`user_id`) ON DELETE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci

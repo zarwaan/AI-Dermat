@@ -1,0 +1,109 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+  <!-- Styles -->
+  <defs>
+    <style>
+      .actor {
+        fill: #f5f5f5;
+        stroke: #333;
+        stroke-width: 2;
+      }
+      .usecase {
+        fill: #e6f3ff;
+        stroke: #4682B4;
+        stroke-width: 2;
+        rx: 30;
+        ry: 20;
+      }
+      .system {
+        fill: none;
+        stroke: #666;
+        stroke-width: 2;
+        stroke-dasharray: 5,5;
+      }
+      .connection {
+        stroke: #333;
+        stroke-width: 1.5;
+        fill: none;
+        marker-end: url(#arrowhead);
+      }
+      .include {
+        stroke: #333;
+        stroke-width: 1;
+        stroke-dasharray: 5,3;
+        fill: none;
+        marker-end: url(#arrowhead);
+      }
+      .text {
+        font-family: Arial, sans-serif;
+        font-size: 14px;
+        text-anchor: middle;
+      }
+      .actor-text {
+        font-family: Arial, sans-serif;
+        font-size: 14px;
+        text-anchor: middle;
+        font-weight: bold;
+      }
+      .include-text {
+        font-family: Arial, sans-serif;
+        font-size: 10px;
+        text-anchor: middle;
+        font-style: italic;
+      }
+    </style>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#333" />
+    </marker>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="800" height="600" fill="#fff"/>
+  
+  <!-- Title -->
+  <text x="400" y="30" font-family="Arial, sans-serif" font-size="20" font-weight="bold" text-anchor="middle">Skin Healthcare Application - Use Case Diagram</text>
+  
+  <!-- System Boundary -->
+  <rect x="150" y="60" width="500" height="480" class="system" rx="10" ry="10"/>
+  <text x="400" y="80" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle">Skin Healthcare System</text>
+  
+  <!-- Actor -->
+  <circle cx="70" cy="250" r="25" class="actor"/>
+  <line x1="70" y1="275" x2="70" y2="325" stroke="#333" stroke-width="2"/>
+  <line x1="30" y1="300" x2="110" y2="300" stroke="#333" stroke-width="2"/>
+  <line x1="70" y1="325" x2="30" y2="375" stroke="#333" stroke-width="2"/>
+  <line x1="70" y1="325" x2="110" y2="375" stroke="#333" stroke-width="2"/>
+  <text x="70" y="405" class="actor-text">Patient</text>
+  
+  <!-- Use Cases -->
+  <ellipse cx="300" cy="120" rx="100" ry="35" class="usecase"/>
+  <text x="300" y="125" class="text">Login</text>
+  
+  <ellipse cx="450" cy="120" rx="100" ry="35" class="usecase"/>
+  <text x="450" y="125" class="text">Sign Up</text>
+  
+  <ellipse cx="300" cy="180" rx="100" ry="35" class="usecase"/>
+  <text x="300" y="185" class="text">Forgot Password</text>
+  
+  <ellipse cx="300" cy="240" rx="100" ry="35" class="usecase"/>
+  <text x="300" y="245" class="text">Upload Skin Image</text>
+  
+  <ellipse cx="300" cy="300" rx="100" ry="35" class="usecase"/>
+  <text x="300" y="305" class="text">Take Skin Quiz</text>
+  
+  <ellipse cx="500" cy="300" rx="100" ry="35" class="usecase"/>
+  <text x="500" y="305" class="text">Get Routine</text>
+  <text x="500" y="315" class="text">Recommendations</text>
+  
+  <ellipse cx="300" cy="360" rx="100" ry="35" class="usecase"/>
+  <text x="300" y="365" class="text">Chat with AI</text>
+  
+  <ellipse cx="500" cy="360" rx="100" ry="35" class="usecase"/>
+  <text x="500" y="365" class="text">Upload Reports</text>
+  
+  <ellipse cx="300" cy="420" rx="100" ry="35" class="usecase"/>
+  <text x="300" y="425" class="text">Book Appointment</text>
+  
+  <ellipse cx="300" cy="480" rx="100" ry="35" class="usecase"/>
+  <text x="300" y="485" class="text">Manage Medical</text>
+  <text x="300" y="500" class="text">History</text>
+</svg>

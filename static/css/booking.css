@@ -1,0 +1,333 @@
+:root {
+    --primary-blue: #5eabc7;
+    --dark-blue: #1d6a80;
+    --light-blue: #b8dae4;
+    --orange: #f7a03e;
+    --light-orange: #facc8d;
+    --text-dark: #333;
+    --text-light: #fff;
+    --gray-light: #f5f5f5;
+    --gray-medium: #e0e0e0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--light-blue);
+    color: var(--text-dark);
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 20px auto;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    display: flex;
+}
+
+.main-content {
+    flex: 1;
+    padding: 30px 40px;
+}
+
+h1 {
+    font-size: 28px;
+    color: var(--text-dark);
+    margin-bottom: 5px;
+    margin-top: 0;
+    text-align: center;
+}
+
+.subtitle {
+    color: var(--orange);
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.booking-form {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.form-section {
+    margin-bottom: 0px;
+}
+
+.form-section h3 {
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: var(--dark-blue);
+    display: flex;
+    align-items: center;
+}
+
+.form-section h3 span {
+    background-color: var(--primary-blue);
+    color: white;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px;
+    font-size: 14px;
+}
+
+.upload-area {
+    border: 2px dashed var(--primary-blue);
+    padding: 30px;
+    text-align: center;
+    border-radius: 8px;
+    background-color: var(--gray-light);
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.upload-area:hover {
+    background-color: #e6f2f5;
+}
+
+.upload-icon {
+    font-size: 48px;
+    color: var(--primary-blue);
+    margin-bottom: 15px;
+}
+
+.consultation-options {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.option-card {
+    flex: 1;
+    min-width: 200px;
+    border: 1px solid var(--gray-medium);
+    border-radius: 8px;
+    padding: 20px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.option-card:hover, .option-card.selected {
+    border-color: var(--primary-blue);
+    box-shadow: 0 0 0 1px var(--primary-blue);
+}
+
+.option-card.selected {
+    background-color: #f0f9fc;
+}
+
+.option-card h4 {
+    color: var(--dark-blue);
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.option-card .price {
+    font-weight: bold;
+    color: var(--orange);
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+.calendar-section {
+    margin-top: 20px;
+}
+
+.calendar {
+    border: 1px solid var(--gray-medium);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.calendar-header {
+    background-color: var(--primary-blue);
+    color: white;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+}
+
+.calendar-day {
+    padding: 10px;
+    text-align: center;
+    border-bottom: 1px solid var(--gray-medium);
+    border-right: 1px solid var(--gray-medium);
+}
+
+.calendar-day:nth-child(7n) {
+    border-right: none;
+}
+
+.calendar-day.day-name {
+    font-weight: bold;
+    background-color: var(--gray-light);
+}
+
+.calendar-day.available {
+    cursor: pointer;
+}
+
+.calendar-day.available:hover {
+    background-color: #e6f2f5;
+}
+
+.calendar-day.selected {
+    background-color: var(--primary-blue);
+    color: white;
+}
+
+.time-slots {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.time-slot {
+    padding: 8px 15px;
+    border: 1px solid var(--gray-medium);
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.time-slot:hover, .time-slot.selected {
+    background-color: var(--primary-blue);
+    color: white;
+    border-color: var(--primary-blue);
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+
+input, select, textarea {
+    width: calc(100% - 24px);
+    padding: 12px;
+    border: 1px solid var(--gray-medium);
+    border-radius: 6px;
+    font-size: 16px;
+}
+
+select{
+    width: 100%;
+}
+
+textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+.checkbox-group {
+    display: flex;
+    align-items: center;
+}
+
+.checkbox-group input {
+    width: auto;
+    margin-right: 10px;
+}
+
+.btn {
+    background-color: var(--primary-blue);
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s;
+    font-weight: bold;
+}
+
+.btn:hover {
+    background-color: var(--dark-blue);
+}
+
+.btn-secondary {
+    background-color: var(--gray-medium);
+    color: var(--text-dark);
+}
+
+.btn-secondary:hover {
+    background-color: #d0d0d0;
+}
+
+.action-buttons {
+    display: flex;
+    justify-content: center !important;
+}
+
+.notification-preferences {
+    margin-top: 20px;
+}
+
+.toggle-switch {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 24px;
+}
+
+.toggle-switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.toggle-slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+    border-radius: 24px;
+}
+
+.toggle-slider:before {
+    position: absolute;
+    content: "";
+    height: 16px;
+    width: 16px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+}
+
+input:checked + .toggle-slider {
+    background-color: var(--primary-blue);
+}
+
+input:checked + .toggle-slider:before {
+    transform: translateX(26px);
+}
+
+.notification-option {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}

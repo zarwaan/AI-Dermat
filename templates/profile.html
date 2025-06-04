@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile</title>
+    <script src="https://cdn.jsdelivr.net/npm/js-cookie@3.0.5/dist/js.cookie.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="/static/css/header.css">
+    <link rel="stylesheet" href="/static/css/profile.css">
+</head>
+<body>
+    <div class="container">
+        <div class="main-content">
+            <!-- <header class="dashboard-header">
+                <div class="logo-container">
+                    <h2>AI Dermat</h2>
+                </div>
+               
+            </header> -->
+            <h1>User Profile & Medical History</h1>
+            <p class="subtitle">Your personal information and medical data</p>
+            
+            <div class="user-history-form">
+                <div class="form-section">
+                    <h3><span>1</span>Personal Information</h3>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>First Name</label>
+                            <input type="text" id="firstName" placeholder="First Name">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>Last Name</label>
+                            <input type="text" id="lastName" placeholder="Last Name">
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Username</label>
+                        <input type="text" id="username" placeholder="Username" disabled>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Contact Number</label>
+                        <input type="tel" id="contact" placeholder="Contact Number" maxlength="10">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Email Address</label>
+                        <input type="email" id="email" placeholder="Email Address" disabled>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Date of Birth</label>
+                        <input type="date" id="dob">
+                    </div>
+                </div>
+                
+                <div class="form-section">
+                    <h3><span>2</span>Medical History</h3>
+                    
+                    <div class="form-group">
+                        <label>Current Medications (if any)</label>
+                        <textarea id="medications" maxlength="100" placeholder="List any medications you are currently taking"></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Known Allergies</label>
+                        <textarea id="allergies" maxlength="100" placeholder="List any known allergies, including medication allergies"></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Past Skin Conditions or Treatments</label>
+                        <textarea id="skinConditions" maxlength="100" placeholder="Describe any past skin conditions or treatments"></textarea>
+                    </div>
+
+                    <div class="action-buttons">
+                        <button class="btn-secondary" onclick="window.open('/','_self')">Cancel</button>
+                        <button class="btn" id="saveChanges">Save Changes</button>
+                    </div>
+                </div>
+
+                <div class="btn-logout">
+                    <button class="btn" id="logout">Logout</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+<script type="module" src="/static/js/profile.js"></script>    
+</body>
+</html>

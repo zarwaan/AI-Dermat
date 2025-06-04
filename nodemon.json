@@ -1,0 +1,4 @@
+{
+    "watch": ["static","templates"],
+    "ext": "js,html,css"
+}

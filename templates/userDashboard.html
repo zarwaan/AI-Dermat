@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Dashboard</title>
+    <script src="https://cdn.jsdelivr.net/npm/js-cookie@3.0.5/dist/js.cookie.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="/static/css/header.css">
+    <link rel="stylesheet" href="/static/css/userDashboard.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <!-- Main Content Area -->
+        <div class="main-content">
+            <!-- Header with user info -->
+            <!-- <header class="dashboard-header">
+                <div class="logo-container">
+                    <h2>AI Dermat</h2>
+                </div>
+            </header> -->
+
+
+            <!-- Dashboard Content -->
+            <div class="dashboard-content">
+                <h1 style="text-align: center;">
+                    <span id="display-username">Welcome!</span>
+                </h1>
+                <h3 id="not-logged-in" style="text-align: center;">
+                    <span>Login or signup to fill in your medical history and start booking appointments!</span>
+                </h3>
+
+                <!-- Quick Actions -->
+                <section class="quick-actions">
+                    <h2>Quick Actions</h2>
+                    <div class="action-cards">
+                        <div class="action-card" id="go-to-booking">
+                            <div class="card-icon">📅</div>
+                            <h3>Book Appointment</h3>
+                            <p>Schedule your next consultation</p>
+                        </div>
+                        <div class="action-card">
+                            <div class="card-icon">📷</div>
+                            <h3>Skin Analysis</h3>
+                            <p>Upload a new image for analysis</p>
+                        </div>
+                        <div class="action-card">
+                            <div class="card-icon">📱</div>
+                            <h3>Take Quiz</h3>
+                            <p>Assess your skin condition</p>
+                        </div>
+                        <div class="action-card">
+                            <div class="card-icon">🤖</div>
+                            <h3>Chat with AI</h3>
+                            <p>Get instant skincare advice</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Appointments -->
+                <section class="appointment-history">
+                    <div class="section-header">
+                        <h2>Upcoming Appointments</h2>
+                    </div>
+                    <div class="appointments-list">
+                        <!-- <div class="appointment-card">
+                            <div class="appointment-date">
+                                <div class="month">MAR</div>
+                                <div class="day">15</div>
+                            </div>
+                            <div class="appointment-details">
+                                <h3>Standard Consultation</h3>
+                                <p>Dr. Sara Johnson</p>
+                                <p>10:30 AM - 11:00 AM</p>
+                            </div>
+                            <div class="appointment-actions">
+                                <button class="btn btn-outline">Cancel</button>
+                            </div>
+                        </div>
+                        <div class="appointment-card">
+                            <div class="appointment-date">
+                                <div class="month">APR</div>
+                                <div class="day">02</div>
+                            </div>
+                            <div class="appointment-details">
+                                <h3>Follow-Up Consultation</h3>
+                                <p>Dr. Sara Johnson</p>
+                                <p>2:00 PM - 2:30 PM</p>
+                            </div>
+                            <div class="appointment-actions">
+                                <button class="btn btn-outline">Cancel</button>
+                            </div>
+                        </div> -->
+                    </div>
+                </section>
+                
+                <!-- Patient Information Section -->
+                <section class="patient-information">
+                    <div class="section-header">
+                        <h2>Patient Information</h2>
+                    </div>
+                    <div class="patient-info-container">
+                        <div class="info-card">
+                            <h3>Personal Details</h3>
+                            <div class="info-group" id="display-full-name">
+                                <label>Full Name:</label>
+                                <p>John Doe</p>
+                            </div>
+                            <div class="info-group" id="display-email">
+                                <label>Email Address:</label>
+                                <p>john.doe@example.com</p>
+                            </div>
+                            <div class="info-group" id="display-dob">
+                                <label>Date of Birth:</label>
+                                <p>Not provided</p>
+                            </div>
+                            <div class="info-group" id="display-contact">
+                                <label>Contact Number:</label>
+                                <p>Not provided</p>
+                            </div>
+                        </div>
+                        
+                        <div class="info-card">
+                            <h3>Medical Information</h3>
+                            <div class="info-group" id="display-meds">
+                                <label>Current Medications:</label>
+                                <p>Not provided</p>
+                            </div>
+                            <div class="info-group" id="display-allgs">
+                                <label>Known Allergies:</label>
+                                <p>Not provided</p>
+                            </div>
+                            <div class="info-group" id="display-past-info">
+                                <label>Past Skin Conditions:</label>
+                                <p>Not provided</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+<script type="module" src="/static/js/userDashboard.js"></script>
+</body>
+</html>

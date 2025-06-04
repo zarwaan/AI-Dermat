@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkinAI - Book a Consultation</title>
+    <script src="https://cdn.jsdelivr.net/npm/js-cookie@3.0.5/dist/js.cookie.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="/static/css/header.css">
+    <link rel="stylesheet" href="/static/css/booking.css">
+</head>
+<body>
+    <div class="container">
+        
+        <div class="main-content">
+            <h1>Book Your Dermatologist Consultation</h1>
+            <p class="subtitle">Get expert skin care advice tailored to your needs</p>
+                        
+            <div class="booking-form">
+                
+                <div class="form-section">
+                    <h3><span>1</span>Select Consultation Type *</h3>
+                    
+                    <div class="consultation-options">
+                        <div class="option-card">
+                            <h4>Standard Consultation</h4>
+                            <p>Comprehensive skin assessment with a certified dermatologist</p>
+                            <ul>
+                                <li>Thorough analysis</li>
+                                <li>Treatment recommendations</li>
+                                <li>Digital prescription if needed</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="option-card">
+                            <h4>Urgent Consultation</h4>
+                            <p>Priority booking for acute skin concerns</p>
+                            <ul>
+                                <br>
+                                <li>Same-day or next-day appointment</li>
+                                <li>In-depth consultation</li>
+                                <li>Expedited treatment plan</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="option-card">
+                            <h4>Follow-Up Consultation</h4>
+                            <p>For existing patients to discuss treatment progress</p>
+                            <ul>
+                                <li>Treatment adjustment if needed</li>
+                                <li>Share updates and ask questions</li>
+                                <li>Progress tracking</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="form-section">
+                    <h3><span>2</span>Schedule Your Appointment *</h3>
+                    
+                    <div class="calendar-section">
+                        <div class="calendar">
+                            <div class="calendar-header">
+                                <button class="btn-secondary">&lt;</button>
+                                <h4>March 2025</h4>
+                                <button class="btn-secondary">&gt;</button>
+                            </div>
+                            <div class="calendar-grid">
+                                <div class="calendar-day day-name">Sun</div>
+                                <div class="calendar-day day-name">Mon</div>
+                                <div class="calendar-day day-name">Tue</div>
+                                <div class="calendar-day day-name">Wed</div>
+                                <div class="calendar-day day-name">Thu</div>
+                                <div class="calendar-day day-name">Fri</div>
+                                <div class="calendar-day day-name">Sat</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="form-section">
+                    <h3><span>3</span>Patient Information & Medical History</h3>
+                    
+                    <div class="form-group">
+                        <label>Full Name</label>
+                        <input type="text" id="full-name" value="John Doe" placeholder="Enter your full name" disabled >
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Contact Number</label>
+                        <input type="tel" id="contact" placeholder="Enter your phone number" disabled>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Email Address</label>
+                        <input type="email" id="email" value="john.doe@example.com" placeholder="Enter your email address" disabled>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Date of Birth</label>
+                        <input type="date" id="dob" disabled>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Current Medications (if any)</label>
+                        <textarea placeholder="List any medications you are currently taking" disabled></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Known Allergies</label>
+                        <textarea placeholder="List any known allergies, including medication allergies" disabled></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Past Skin Conditions or Treatments</label>
+                        <textarea placeholder="Describe any past skin conditions or treatments" disabled></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Symptom Description *</label>
+                        <textarea placeholder="Please describe your skin concerns in detail"></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>How long have you experienced these symptoms? *</label>
+                        <select>
+                            <option>Less than a week</option>
+                            <option>1-2 weeks</option>
+                            <option>2-4 weeks</option>
+                            <option>1-3 months</option>
+                            <option>3-6 months</option>
+                            <option>More than 6 months</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-section">
+                    <h3><span>4</span>Notifications & Reminders</h3>
+                    
+                    <div class="notification-preferences">
+                        <div class="notification-option">
+                            <div>Email confirmation after booking</div>
+                            <label class="toggle-switch">
+                                <input type="checkbox" id="email-toggle" checked>
+                                <span class="toggle-slider"></span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="error-text" id="error-text"
+                style="width: fit-content; margin: auto; font-weight: 600; color: brown; font-size: 1.25rem;">
+                </div>
+
+                <div class="action-buttons">
+                    <button class="btn">Confirm Booking</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src = "/static/js/booking.js" type="module"></script>
+</html>
