@@ -1,0 +1,8 @@
+fastapi
+uvicorn
+numpy
+pillow
+tensorflow
+python-dotenv
+PyPDF2
+google-generativeai
